@@ -5,7 +5,7 @@ import { VehicleLayout } from "@layouts/vehicle";
 import { _404Page } from "@modules/404";
 import { HomePage } from "@modules/home";
 import { SplashPage } from "@modules/splash";
-import { VehicleInfoPage } from "@modules/vehicle";
+import { VehicleInfoPage, VehicleServicesPage } from "@modules/vehicle";
 
 // List of URL paths that our application supports.
 export const Paths = [
@@ -13,7 +13,7 @@ export const Paths = [
   "/home",
   "/vehicle/:garageId/:vehicleId/showcase",
   "/vehicle/:garageId/:vehicleId/services",
-  "/vehicle/:garageId/:vehicleId/parts",
+  "/vehicle/:garageId/:vehicleId/accessories",
   "/vehicle/:garageId/:vehicleId/docs",
   "/vehicle/:garageId/:vehicleId/checklist",
 ] as const;
@@ -42,8 +42,8 @@ export const AppRoutes: RouteObject[] = [
     r(HomePage, "/home"),
     r(VehicleLayout, [
       r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/showcase"),
-      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/services"),
-      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/parts"),
+      r(VehicleServicesPage, "/vehicle/:garageId/:vehicleId/services"),
+      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/accessories"),
       r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/docs"),
       r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/checklist"),
     ]),

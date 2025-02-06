@@ -38,7 +38,6 @@ const VehicleList: FC<Props> = ({ vehicle, garage }) => (
             </div>
           }
           className="w-2xs"
-          onClick={() => {}}
         >
           <div className="min-h-16 px-2 py-1">
             <div className="text-lg font-semibold">{v.nickName}</div>

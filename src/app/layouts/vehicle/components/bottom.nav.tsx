@@ -12,7 +12,7 @@ import { CommonType } from "@common/types";
 const menu: CommonType[] = [
   { key: "showcase", label: "Showcase", icon: <LayoutDashboard /> },
   { key: "services", label: "Services", icon: <Wrench /> },
-  { key: "parts", label: "Parts", icon: <Package2 /> },
+  { key: "accessories", label: "Accessories", icon: <Package2 /> },
   { key: "docs", label: "Docs", icon: <Dock /> },
   { key: "checklist", label: "Checklist", icon: <ListCheck /> },
 ];
