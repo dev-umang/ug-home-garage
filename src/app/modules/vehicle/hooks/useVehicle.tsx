@@ -1,9 +1,10 @@
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
+import { useAtom } from "jotai";
 import { Garages } from "@common/data";
-import { Vehicle } from "@common/types";
+import { AtomSelectedVehicle } from "..";
 
 const useVehicle = () => {
-  const [vehicle, setVehicle] = useState<Vehicle | undefined | null>(undefined);
+  const [vehicle, setVehicle] = useAtom(AtomSelectedVehicle);
 
   const getVehicle = useCallback((garageId?: string, vehicleId?: string) => {
     const _vehicle = Garages.find((g) => g.id === garageId)?.vehicles?.find(

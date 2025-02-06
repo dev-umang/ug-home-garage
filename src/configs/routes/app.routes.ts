@@ -1,13 +1,22 @@
 import { FC } from "react";
 import { RouteObject } from "react-router-dom";
-import { MainLayout } from "@app/layouts/main";
+import { MainLayout } from "@layouts/main";
+import { VehicleLayout } from "@layouts/vehicle";
 import { _404Page } from "@modules/404";
 import { HomePage } from "@modules/home";
 import { SplashPage } from "@modules/splash";
-import { SelectedVehiclePage } from "@modules/vehicle";
+import { VehicleInfoPage } from "@modules/vehicle";
 
 // List of URL paths that our application supports.
-export const Paths = ["/", "/home", "/vehicle/:garageId/:vehicleId"] as const;
+export const Paths = [
+  "/",
+  "/home",
+  "/vehicle/:garageId/:vehicleId/showcase",
+  "/vehicle/:garageId/:vehicleId/services",
+  "/vehicle/:garageId/:vehicleId/parts",
+  "/vehicle/:garageId/:vehicleId/docs",
+  "/vehicle/:garageId/:vehicleId/checklist",
+] as const;
 
 export type Path = (typeof Paths)[number]; // Exported type of Paths for auto completion.
 
@@ -31,7 +40,13 @@ export const AppRoutes: RouteObject[] = [
   r(SplashPage, "/"),
   r(MainLayout, [
     r(HomePage, "/home"),
-    r(SelectedVehiclePage, "/vehicle/:garageId/:vehicleId"),
+    r(VehicleLayout, [
+      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/showcase"),
+      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/services"),
+      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/parts"),
+      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/docs"),
+      r(VehicleInfoPage, "/vehicle/:garageId/:vehicleId/checklist"),
+    ]),
   ]),
   // ]),
 ];

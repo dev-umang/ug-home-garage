@@ -25,6 +25,7 @@
     "paths": {
       "@components/*": ["src/app/components/*"],
       "@modules/*": ["src/app/modules/*"],
+      "@layouts/*": ["src/app/layouts/*"],
       "@common/*": ["src/common/*"],
       "@configs/*": ["src/configs/*"],
       "@assets/*": ["src/assets/*"],

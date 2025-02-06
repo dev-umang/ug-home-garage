@@ -1,8 +1,9 @@
 import { CarFront, Wrench } from "lucide-react";
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { Garage, Vehicle } from "@common/types";
+import { Garage } from "@common/types";
 import { Card } from "@components/ui";
+import { Vehicle } from "@modules/vehicle";
 
 type Props = {
   vehicle?: Vehicle[];
@@ -12,7 +13,7 @@ type Props = {
 const VehicleList: FC<Props> = ({ vehicle, garage }) => (
   <div className="flex gap-4 flex-nowrap overflow-auto">
     {vehicle?.map((v) => (
-      <Link to={`/vehicle/${garage?.id}/${v.id}`} key={v.id}>
+      <Link to={`/vehicle/${garage?.id}/${v.id}/showcase`} key={v.id}>
         <Card
           header={
             <div className="h-48 relative">

@@ -1,3 +1,4 @@
-import { Brand, Garage, Vehicle } from "./garage.types";
+import { CommonType } from "./common.types";
+import { Garage } from "./garage.types";
 
-export type { Garage, Vehicle, Brand };
+export type { Garage, CommonType };

@@ -1,4 +1,6 @@
 import useVehicle from "./hooks/useVehicle";
-import SelectedVehiclePage from "./pages/selectedVehicle.page";
+import VehicleInfoPage from "./pages/vehicleInfo.page";
+import { AtomSelectedVehicle } from "./store/vehicle.store";
+import { Vehicle } from "./types/vehicle.type";
 
-export { SelectedVehiclePage, useVehicle };
+export { VehicleInfoPage, useVehicle, AtomSelectedVehicle, type Vehicle };
