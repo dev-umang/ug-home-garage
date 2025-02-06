@@ -4,9 +4,10 @@ import { MainLayout } from "@app/layouts/main";
 import { _404Page } from "@modules/404";
 import { HomePage } from "@modules/home";
 import { SplashPage } from "@modules/splash";
+import { SelectedVehiclePage } from "@modules/vehicle";
 
 // List of URL paths that our application supports.
-export const Paths = ["/", "/home"] as const;
+export const Paths = ["/", "/home", "/vehicle/:garageId/:vehicleId"] as const;
 
 export type Path = (typeof Paths)[number]; // Exported type of Paths for auto completion.
 
@@ -28,6 +29,9 @@ export const AppRoutes: RouteObject[] = [
   // r(GlobalLayout, [
   r(_404Page, "*"),
   r(SplashPage, "/"),
-  r(MainLayout, [r(HomePage, "/home")]),
+  r(MainLayout, [
+    r(HomePage, "/home"),
+    r(SelectedVehiclePage, "/vehicle/:garageId/:vehicleId"),
+  ]),
   // ]),
 ];

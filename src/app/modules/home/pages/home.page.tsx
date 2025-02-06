@@ -1,12 +1,10 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Garages } from "@common/data";
+import GarageList from "../components/garageList/garage.list";
 
 const HomePage: FC = () => (
   <div>
-    <div>HomePage</div>
-    <Link className="text-sky-600 font-bold" to={"/"}>
-      Go to Splash
-    </Link>
+    <GarageList garages={Garages} />
   </div>
 );
 

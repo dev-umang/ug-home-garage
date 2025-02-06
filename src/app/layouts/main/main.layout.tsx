@@ -5,8 +5,10 @@ import MainHeader from "./components/main.header";
 const MainLayout: FC = () => (
   <div>
     <MainHeader />
-    <Outlet />
+    <div className="max-w-[60%] m-auto py-4">
+      <Outlet />
     </div>
+  </div>
 );
 
 export default MainLayout;
