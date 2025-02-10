@@ -1,11 +1,14 @@
 import { FC } from "react";
+import { Page } from "@components/shared";
 import useVehicle from "../hooks/useVehicle";
 
 const VehicleServicesPage: FC = () => {
   const { vehicle } = useVehicle();
 
   return (
-    <div>{vehicle?.services?.map((s, i) => <div key={i}>{s.kms}</div>)}</div>
+    <Page title="Services">
+      {vehicle?.services?.map((s, i) => <div key={i}></div>)}
+    </Page>
   );
 };
 

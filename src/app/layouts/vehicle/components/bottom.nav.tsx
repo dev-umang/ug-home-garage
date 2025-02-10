@@ -22,7 +22,7 @@ const BottomNav: FC = () => {
   const path = useLocation().pathname;
 
   return (
-    <div className="flex justify-center fixed left-0 right-0 bottom-0 border-t border-t-slate-400">
+    <div className="flex justify-center fixed left-0 right-0 bottom-0 border-t border-slate-400/20">
       <div className="grid grid-cols-5">
         {menu.map((m) => {
           if (!m.key) return null;

@@ -2,11 +2,9 @@ import { PluginOption, defineConfig, loadEnv } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import Paths from "vite-tsconfig-paths";
 import react from "@vitejs/plugin-react";
-import MillionLint from "@million/lint";
 import tailwindcss from "@tailwindcss/vite";
 
 const plugins: PluginOption[] = [
-  MillionLint.vite(),
   react(),
   Paths(),
   tailwindcss(),
