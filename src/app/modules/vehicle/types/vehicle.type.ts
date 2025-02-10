@@ -1,3 +1,5 @@
+import { Garage } from "@common/types";
+
 export type Check = {
   description: string;
   resolved?: boolean;
@@ -54,4 +56,5 @@ export type Vehicle = {
   checklist?: Check[];
   parts?: ExternalParts[];
   docs?: Doc[];
+  garage?: Garage;
 };

@@ -17,6 +17,10 @@ const Garages: Garage[] = [
         id: "hi450",
         model: "Himalayan 450",
         nickName: "Himmy",
+        garage: {
+          id: "g1",
+          name: "Aarambh",
+        },
         image:
           "https://imgcdn.zigwheels.my/medium/gallery/exterior/89/2470/royal-enfield-himalayan-450-65573.jpg",
         brand: Brands.re,
