@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronsUpDown } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { Avatar } from "@components/ui";
@@ -20,7 +20,8 @@ const VehicleHeader: FC = () => {
           </Link>
           <div className="flex flex-col justify-center">
             <div className="font-bold text-lg/5 flex items-center gap-1">
-              {vehicle?.nickName} <ChevronsUpDown strokeWidth={2.5} size={16} />
+              {vehicle?.nickName} 
+              {/* <ChevronsUpDown strokeWidth={2.5} size={16} /> */}
             </div>
             <span className="text-xs text-slate-600">
               {vehicle?.brand?.name} {vehicle?.model}

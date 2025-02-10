@@ -1,4 +1,9 @@
 import Avatar from "./avatar/avatar.ui";
+import FloatingButton from "./buttons/floating.button";
 import Card from "./cards/card.ui";
 
-export { Card, Avatar };
+const Button = {
+  Floating: FloatingButton,
+};
+
+export { Card, Avatar, Button };
